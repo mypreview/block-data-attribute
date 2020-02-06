@@ -1,0 +1,58 @@
+{
+   "name": "block-data-attribute",
+   "title": "Block Data Attribute",
+   "version": "1.1.0",
+   "private": true,
+   "author": "MyPreview",
+   "author_shop": "https://www.mypreview.one",
+   "author_uri": "https://www.upwork.com/o/profiles/users/_~016ad17ad3fc5cce94",
+   "requires": "5.2",
+   "tested_up_to": "5.3.1",
+   "license": "GPL-3.0",
+   "copyright": "© 2015 - 2020 MyPreview. All Rights Reserved.",
+   "scripts": {
+      "dev": "cross-env BABEL_ENV=default webpack --watch --info-verbosity none",
+      "build": "cross-env BABEL_ENV=default NODE_ENV=production webpack",
+      "makepot": "wp i18n make-pot . --merge=languages/block-data-attribute-js.pot --skip-js",
+      "makepot:php": "npx pot-to-php languages/block-data-attribute-js.pot languages/block-data-attribute-translations.php block-data-attribute"
+   },
+   "devDependencies": {
+      "@babel/core": "7.7.4",
+      "@babel/plugin-proposal-object-rest-spread": "7.7.4",
+      "@wordpress/babel-plugin-makepot": "^3.3.0",
+      "@wordpress/babel-preset-default": "4.7.0",
+      "@wordpress/browserslist-config": "^2.6.0",
+      "@wordpress/dependency-extraction-webpack-plugin": "^2.1.0",
+      "@wordpress/i18n": "3.7.0",
+      "babel-core": "7.0.0-bridge.0",
+      "babel-eslint": "10.0.3",
+      "babel-loader": "8.0.6",
+      "chalk": "^3.0.0",
+      "classnames": "^2.2.6",
+      "clean-webpack-plugin": "^3.0.0",
+      "core-js": "^3.4.2",
+      "cross-env": "^6.0.3",
+      "eslint": "6.7.0",
+      "eslint-config-wordpress": "^2.0.0",
+      "eslint-plugin-react": "^7.16.0",
+      "memize": "^1.0.5",
+      "progress-bar-webpack-plugin": "^1.12.1",
+      "uglifyjs-webpack-plugin": "^2.2.0",
+      "webpack": "^4.41.5",
+      "webpack-cli": "^3.3.10"
+   },
+   "dependencies": {
+      "es6-object-assign": "^1.1.0",
+      "lodash.escape": "^4.0.1"
+   },
+   "browserslist": [
+      "extends @wordpress/browserslist-config"
+   ],
+   "engines": {
+      "node": ">=10.10.0",
+      "npm": ">=6.4.0"
+   },
+   "eslintConfig": {
+      "extends": "wordpress"
+   }
+}
