@@ -1,0 +1,20 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: assets/src/inspector.js:57
+msgid "Data Attributes"
+msgstr ""
+
+#: assets/src/inspector.js:61
+msgid "Number of Attributes"
+msgstr ""
+
+#: assets/src/inspector.js:78
+msgid "Key"
+msgstr ""
+
+#: assets/src/inspector.js:83
+msgid "Value"
+msgstr ""
