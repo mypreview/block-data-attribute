@@ -4,6 +4,7 @@
 import get from 'lodash/get';
 import times from 'lodash/times';
 import includes from 'lodash/includes';
+import escape from 'lodash.escape';
 import allowedBlocks from './allowedBlocks';
 
 /**
@@ -32,7 +33,7 @@ function addSaveProps( extraProps, blockType, attributes ) {
         	const key = get( filterData, [index, 'key'] ),
 				  value = get( filterData, [index, 'value'] );
 
-            if ( !! key && !! value ) extraAttrs[`data-${key}`] = value;
+            if ( !! key && !! value ) extraAttrs[`data-${ escape( key ) }`] = escape( value );
         } ) }
     } // End If Statement
 
