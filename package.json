@@ -1,8 +1,8 @@
 {
    "name": "block-data-attribute",
    "title": "Block Data Attribute",
-   "version": "1.1.0",
-   "private": true,
+   "description": "This plugin designed with extensibility in mind for data that should be associated with a particular block type but need not have any defined meaning.",
+   "version": "1.0.0",
    "author": "MyPreview",
    "author_shop": "https://www.mypreview.one",
    "author_uri": "https://www.upwork.com/o/profiles/users/_~016ad17ad3fc5cce94",
@@ -10,6 +10,13 @@
    "tested_up_to": "5.3.1",
    "license": "GPL-3.0",
    "copyright": "© 2015 - 2020 MyPreview. All Rights Reserved.",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/mypreview/block-data-attribute.git"
+   },
+   "bugs": {
+      "url": "https://github.com/mypreview/block-data-attribute/issues"
+   },
    "scripts": {
       "dev": "cross-env BABEL_ENV=default webpack --watch --info-verbosity none",
       "build": "cross-env BABEL_ENV=default NODE_ENV=production webpack",
