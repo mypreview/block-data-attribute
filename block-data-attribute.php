@@ -21,7 +21,7 @@
  * @wordpress-plugin
  * Plugin Name:       		Block Data Attribute
  * Plugin URI:        		https://www.mypreview.one
- * Description:       		XXXXXXXX
+ * Description:       		This plugin designed with extensibility in mind for data that should be associated with a particular block type but need not have any defined meaning.
  * Version:           		1.0.0
  * Author:            		MyPreview
  * Author URI:        		https://www.upwork.com/o/profiles/users/_~016ad17ad3fc5cce94
@@ -50,12 +50,12 @@ define( 'BLOCK_DATA_ATTRIBUTE_PLUGIN_BASENAME', plugin_basename( BLOCK_DATA_ATTR
 define( 'BLOCK_DATA_ATTRIBUTE_DIR_URL', plugin_dir_url( BLOCK_DATA_ATTRIBUTE_FILE ) );
 define( 'BLOCK_DATA_ATTRIBUTE_DIR_PATH', plugin_dir_path( BLOCK_DATA_ATTRIBUTE_FILE ) ); 
 
-if ( ! class_exists( 'Container_Block' ) ) :
+if ( ! class_exists( 'Block_Data_Attribute' ) ) :
 
 	/**
 	 * The Block Data Attribute - Class
 	 */
-	final class Container_Block {
+	final class Block_Data_Attribute {
 
 		/**
          * Instance of the class.
@@ -65,8 +65,8 @@ if ( ! class_exists( 'Container_Block' ) ) :
 		private static $_instance = NULL;
 
 		/**
-		 * Main `Container_Block` instance
-		 * Ensures only one instance of `Container_Block` is loaded or can be loaded.
+		 * Main `Block_Data_Attribute` instance
+		 * Ensures only one instance of `Block_Data_Attribute` is loaded or can be loaded.
 		 *
 		 * @access 	public
 		 * @return  instance
@@ -89,9 +89,9 @@ if ( ! class_exists( 'Container_Block' ) ) :
 		 */
 		protected function __construct() {
 
-			add_action( 'init', 																	array( $this, 'textdomain' ), 			   10 );
-			add_action( 'enqueue_block_editor_assets', 												array( $this, 'editor_enqueue' ), 		   10 );
-			add_filter( sprintf( 'plugin_action_links_%s', BLOCK_DATA_ATTRIBUTE_PLUGIN_BASENAME ), 	array( $this, 'additional_links' ), 	10, 1 );
+			add_action( 'init', array( $this, 'textdomain' ) );
+			add_action( 'enqueue_block_editor_assets', array( $this, 'editor_enqueue' ) );
+			add_filter( sprintf( 'plugin_action_links_%s', BLOCK_DATA_ATTRIBUTE_PLUGIN_BASENAME ), 	array( $this, 'additional_links' ) );
 
 		}
 
@@ -103,7 +103,7 @@ if ( ! class_exists( 'Container_Block' ) ) :
 		 */
 		protected function __clone() {
 
-			_doing_it_wrong( __FUNCTION__, _x( 'Cloning instances of this class is forbidden.', 'clone', 'block-data-attribute' ) , BLOCK_DATA_ATTRIBUTE_VERSION );
+			_doing_it_wrong( __FUNCTION__, _x( 'Cloning instances of this class is forbidden.', 'clone', 'block-data-attribute' ), BLOCK_DATA_ATTRIBUTE_VERSION );
 
 		}
 
@@ -115,7 +115,7 @@ if ( ! class_exists( 'Container_Block' ) ) :
 		 */
 		public function __wakeup() {
 
-			_doing_it_wrong( __FUNCTION__, _x( 'Unserializing instances of this class is forbidden.', 'wakeup', 'block-data-attribute' ) , BLOCK_DATA_ATTRIBUTE_VERSION );
+			_doing_it_wrong( __FUNCTION__, _x( 'Unserializing instances of this class is forbidden.', 'wakeup', 'block-data-attribute' ), BLOCK_DATA_ATTRIBUTE_VERSION );
 
 		}
 
@@ -170,17 +170,15 @@ if ( ! class_exists( 'Container_Block' ) ) :
 endif;
 
 /**
- * Returns the main instance of Container_Block to prevent the need to use globals.
+ * Returns the main instance of Block_Data_Attribute to prevent the need to use globals.
  *
- * @return  object(class) 	Container_Block::instance
+ * @return  object(class) 	Block_Data_Attribute::instance
  */
-if ( ! function_exists( 'container_block_init' ) ) :
+if ( ! function_exists( 'block_data_attribute_init' ) ) :
 	
-	function container_block_init() {
-
-		return Container_Block::instance();
-
+	function block_data_attribute_init() {
+		return Block_Data_Attribute::instance();
 	}
 
-	container_block_init();
+	block_data_attribute_init();
 endif;
