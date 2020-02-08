@@ -3,18 +3,18 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
-#: assets/src/inspector.js:57
+#: assets/src/inspector.js:58
 msgid "Data Attributes"
 msgstr ""
 
-#: assets/src/inspector.js:61
+#: assets/src/inspector.js:62
 msgid "Number of Attributes"
 msgstr ""
 
-#: assets/src/inspector.js:78
+#: assets/src/inspector.js:79
 msgid "Key"
 msgstr ""
 
-#: assets/src/inspector.js:83
+#: assets/src/inspector.js:84
 msgid "Value"
 msgstr ""
