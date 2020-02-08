@@ -3,7 +3,6 @@
  */
 import includes from 'lodash/includes';
 import allowedBlocks from './allowedBlocks';
-require( 'es6-object-assign/auto' );
 
 /**
  * WordPress dependencies
