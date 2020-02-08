@@ -6,7 +6,7 @@ const { withSelect } = wp.data;
 /**
  * Generate block data.
  */
-const applyWithSelect = withSelect( ( select, block ) => {
+const applyWithSelect = withSelect( select => {
     const { 
         getSelectedBlock } = select( 'core/block-editor' );
 
