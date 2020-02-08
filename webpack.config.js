@@ -8,6 +8,7 @@
  */
 const path = require( 'path' );
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
+const { BundleAnalyzerPlugin } = require( 'webpack-bundle-analyzer' );
 const ProgressBarPlugin = require( 'progress-bar-webpack-plugin' );
 const UglifyJsPlugin = require( 'uglifyjs-webpack-plugin' );
 const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
@@ -42,13 +43,27 @@ const config = {
     watchOptions: {
         ignored: /node_modules/
     },
-    devtool: NODE_ENV === 'development'  ?  'source-map'  :  false,
+    devtool: NODE_ENV === 'development' ? 'source-map' : false,
     module: {
         rules: [
             {
-                test: /\.(js|jsx|mjs)$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader?cacheDirectory'
+                use: {
+                    loader: 'babel-loader?cacheDirectory',
+                    options: {
+                        presets: [ '@wordpress/babel-preset-default' ],
+                        plugins: [
+                            [ "@babel/plugin-proposal-object-rest-spread", { 
+                                "loose": true, 
+                                "useBuiltIns": true 
+                            } ],
+                            [ "@wordpress/babel-plugin-makepot", {
+                               "output": "languages/block-data-attribute-js.pot"
+                            } ]
+                        ]
+                    }
+                }
             }
         ],
     },
@@ -73,6 +88,9 @@ const config = {
     },
     plugins: [
         new CleanWebpackPlugin(),
+        new BundleAnalyzerPlugin( {
+            openAnalyzer: false
+        } ),
         new ProgressBarPlugin( {
             format: chalk.blue( 'Build core script' ) + ' [:bar] ' + chalk.green( ':percent' ) + ' :msg (:elapsed seconds)',
         } ),
