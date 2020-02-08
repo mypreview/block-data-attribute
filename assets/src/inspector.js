@@ -6,6 +6,7 @@ import times from 'lodash/times';
 import includes from 'lodash/includes';
 import withSelect from './withSelect';
 import allowedBlocks from './allowedBlocks';
+require( 'es6-object-assign/auto' );
 
 /**
  * WordPress dependencies
@@ -13,7 +14,7 @@ import allowedBlocks from './allowedBlocks';
 const { __ } = wp.i18n;
 const { addFilter } = wp.hooks;
 const { Fragment } = wp.element;
-const { compose, createHigherOrderComponent } = wp.compose;
+const { createHigherOrderComponent } = wp.compose;
 const { InspectorControls } = wp.blockEditor;
 const { PanelBody, BaseControl, HorizontalRule, TextControl, RangeControl } = wp.components;
 
@@ -38,10 +39,10 @@ const addControls = createHigherOrderComponent( BlockEdit => {
             bdaData: data } = attributes;
 
         const onChange = ( value, key, index ) => {
-			const data = attributes.bdaData,
-				  newData = data.slice();
+			const oldData = attributes.bdaData,
+				  newData = oldData.slice();
 
-			newData[index] = Object.assign( {}, data[index] );
+			newData[index] = Object.assign( {}, oldData[index] );
 			newData[index][key] = value;
 			setAttributes( { bdaData: [...newData] } );
 		}
@@ -72,7 +73,7 @@ const addControls = createHigherOrderComponent( BlockEdit => {
 
 										return (
 											<Fragment>
-												<HorizontalRule/>
+												<HorizontalRule />
 												<BaseControl>
 													<TextControl
 												        label={ __( 'Key', 'block-data-attribute' ) }
