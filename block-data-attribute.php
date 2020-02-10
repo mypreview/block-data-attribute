@@ -161,6 +161,7 @@ if ( ! class_exists( 'Block_Data_Attribute' ) ) :
 
 			$plugin_links = array();
 			$plugin_links[] = sprintf( _x( '%sHire Me!%s', 'plugin link', 'block-data-attribute' ) , sprintf( '<a href="%s" class="button-link-delete" target="_blank" rel="noopener noreferrer nofollow" title="%s">', esc_url( BLOCK_DATA_ATTRIBUTE_AUTHOR_URI ), esc_attr_x( 'Looking for help? Hire Me!', 'upsell', 'block-data-attribute' ) ), '</a>' );
+			$plugin_links[] = sprintf( _x( '%sSupport%s', 'plugin link', 'block-data-attribute' ) , sprintf( '<a href="https://wordpress.org/support/plugin/%s" target="_blank" rel="noopener noreferrer nofollow">', BLOCK_DATA_ATTRIBUTE_SLUG ), '</a>' );
 
 			return array_merge( $plugin_links, $links );
 
