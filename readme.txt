@@ -82,5 +82,9 @@ I am a full-stack developer with over five years of experience in WordPress them
 1. Plugin Settings
 
 == Changelog ==
+= 1.0.1 =
+* Fixed Github repo web-address.
+* Updated plugin banner image.
+
 = 1.0.0 =
 * Initial release.
