@@ -1,6 +1,6 @@
 === Block Data Attribute ===
 Contributors: mahdiyazdani, mypreview, gookaani
-Tags: data, attribute
+Tags: add a data attribute,data-attribute tag,custom attribute
 Donate link: https://www.mypreview.one
 Requires at least: 5.2
 Tested up to: 5.3.1
