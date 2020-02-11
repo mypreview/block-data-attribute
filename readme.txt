@@ -68,7 +68,7 @@ Here’s the the [WordPress translation website &#8594;](https://translate.wordp
 = How do I contribute to this plugin? =
 We welcome contributions in any form, and you can help reporting, testing, and detailing bugs.
 
-Here’s the [GitHub development repository &#8594;](https://github.com/mypreview/Woo-Store-Vacation "GitHub development repository")
+Here’s the [GitHub development repository &#8594;](https://github.com/mypreview/block-data-attribute "GitHub development repository")
 
 = Did you like the idea behind this plugin? =
 Please share your experience by leaving this plugin [5 shining stars](https://wordpress.org/support/plugin/block-data-attribute/reviews/ "Rate Block Data Attribute 5 stars") if you like it, thanks!
