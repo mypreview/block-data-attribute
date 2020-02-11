@@ -3,6 +3,8 @@
 
 ![Block Data Attribute](https://ps.w.org/block-data-attribute/assets/banner-1544x500.jpg?rev=1542924)
 
+> ⚠️ If you are not a developer, please use the offical [plugin post page](https://wordpress.org/plugins/block-data-attribute "Download Block Data Attribute plugin") on wordpress.org.
+
 ## Installation
 
 * Download the plugin from it's GitHub Repository Release window.
