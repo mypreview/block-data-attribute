@@ -20,7 +20,13 @@
    "scripts": {
       "dev": "cross-env BABEL_ENV=default webpack --watch --info-verbosity none",
       "build": "cross-env BABEL_ENV=default NODE_ENV=production webpack",
+      "lint:css": "stylelint 'assets/src/**/*.css'",
+      "lint:css-fix": "stylelint 'assets/src/**/*.css' --fix",
       "lint:js": "eslint assets/src/ --ext=js,jsx",
+      "lint:js-fix": "eslint assets/src/ --ext=js,jsx --fix",
+      "lint:php": "composer phpcs",
+      "lint:php-fix": "composer phpcbf",
+      "reformat-files": "prettier --ignore-path .eslintignore --write \"**/*.{js,jsx,json,ts,tsx}\"",
       "makepot": "wp i18n make-pot . languages/block-data-attribute-js.pot --exclude=node_modules,vendor,dist",
       "makepot:php": "npx pot-to-php languages/block-data-attribute-js.pot languages/block-data-attribute-translations.php block-data-attribute"
    },
