@@ -1,0 +1,18 @@
+{
+  "name": "mypreview/block-data-attribute",
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=7.2"
+  },
+  "require-dev": {
+    "wp-coding-standards/wpcs": "^2.2.0",
+    "phpcompatibility/phpcompatibility-wp": "^2.1.0",
+    "wp-cli/i18n-command": "^2.2.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.5"
+  },
+  "scripts": {
+    "phpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+    "phpcbf": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf",
+    "wp": "\"vendor/wp-cli/wp-cli/bin/wp\""
+  }
+}
