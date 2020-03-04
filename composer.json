@@ -1,6 +1,8 @@
 {
   "name": "mypreview/block-data-attribute",
   "type": "wordpress-plugin",
+  "license": "GPL-3.0-or-later",
+  "prefer-stable": true,
   "require": {
     "php": ">=7.2"
   },
