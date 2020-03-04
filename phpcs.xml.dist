@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    name="Container Block"
+    name="Block Data Attribute"
     xsi:noNamespaceSchemaLocation="./vendor/squizlabs/php_codesniffer/phpcs.xsd">
 
-    <description>Container Block rules for PHP_CodeSniffer</description>
+    <description>Block Data Attribute rules for PHP_CodeSniffer</description>
 
     <!--
     #############################################################################

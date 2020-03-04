@@ -1,6 +1,6 @@
 <?php
 /**
- * Unistall Container Block.
+ * Unistall Block Data Attribute.
  * Fired when the plugin is uninstalled.
  *
  * @author      Mahdi Yazdani
