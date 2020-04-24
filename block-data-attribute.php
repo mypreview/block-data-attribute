@@ -158,6 +158,7 @@ if ( ! class_exists( 'Block_Data_Attribute' ) ) :
 			$script_url        = sprintf( '%sdist/script.js', BLOCK_DATA_ATTRIBUTE_DIR_URL );
 			// Enqueue the script.
 			wp_enqueue_script( BLOCK_DATA_ATTRIBUTE_SLUG, $script_url, $script_asset['dependencies'], $script_asset['version'], true );
+			wp_set_script_translations( BLOCK_DATA_ATTRIBUTE_SLUG, 'block-data-attribute', sprintf( '%s/languages/', BLOCK_DATA_ATTRIBUTE_DIR_PATH ) );
 
 		}
 
