@@ -149,13 +149,13 @@ if ( ! class_exists( 'Block_Data_Attribute' ) ) :
 		 */
 		public function editor_enqueue() {
 
-			$script_path       = sprintf( '%sassets/dist/script.js', BLOCK_DATA_ATTRIBUTE_DIR_PATH );
-			$script_asset_path = sprintf( '%sassets/dist/script.asset.php', BLOCK_DATA_ATTRIBUTE_DIR_PATH );
+			$script_path       = sprintf( '%sdist/script.js', BLOCK_DATA_ATTRIBUTE_DIR_PATH );
+			$script_asset_path = sprintf( '%sdist/script.asset.php', BLOCK_DATA_ATTRIBUTE_DIR_PATH );
 			$script_asset      = file_exists( $script_asset_path ) ? require $script_asset_path : array(
-				'dependencies' => array( 'wp-blocks', 'wp-dom-ready' ),
+				'dependencies' => array( 'wp-blocks', 'wp-dom-ready', 'lodash' ),
 				'version'      => filemtime( $script_path ),
 			);
-			$script_url        = sprintf( '%sassets/dist/script.js', BLOCK_DATA_ATTRIBUTE_DIR_URL );
+			$script_url        = sprintf( '%sdist/script.js', BLOCK_DATA_ATTRIBUTE_DIR_URL );
 			// Enqueue the script.
 			wp_enqueue_script( BLOCK_DATA_ATTRIBUTE_SLUG, $script_url, $script_asset['dependencies'], $script_asset['version'], true );
 
