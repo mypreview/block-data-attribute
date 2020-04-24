@@ -29,6 +29,6 @@
 		"lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
 		"lint:wpcbf": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf",
 		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor --exclude node_modules .",
-		"make-pot": "wp i18n make-pot . languages/flydent-extras.pot"
+		"make-pot": "wp i18n make-pot . languages/block-data-attribute.pot"
 	}
 }
