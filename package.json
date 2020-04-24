@@ -1,71 +1,73 @@
 {
-   "name": "block-data-attribute",
-   "title": "Block Data Attribute",
-   "description": "This plugin designed with extensibility in mind for data that should be associated with a particular block type but need not have any defined meaning.",
-   "version": "1.0.0",
-   "author": "MyPreview",
-   "author_shop": "https://www.mypreview.one",
-   "author_uri": "https://www.upwork.com/o/profiles/users/_~016ad17ad3fc5cce94",
-   "requires": "5.2",
-   "tested_up_to": "5.3.1",
-   "license": "GPL-3.0",
-   "copyright": "© 2015 - 2020 MyPreview. All Rights Reserved.",
-   "repository": {
-      "type": "git",
-      "url": "https://github.com/mypreview/block-data-attribute.git"
-   },
-   "bugs": {
-      "url": "https://github.com/mypreview/block-data-attribute/issues"
-   },
-   "scripts": {
-      "dev": "cross-env BABEL_ENV=default webpack --watch --info-verbosity none",
-      "build": "cross-env BABEL_ENV=default NODE_ENV=production webpack",
-      "lint:css": "stylelint 'assets/src/**/*.css'",
-      "lint:css-fix": "stylelint 'assets/src/**/*.css' --fix",
-      "lint:js": "eslint assets/src/ --ext=js,jsx",
-      "lint:js-fix": "eslint assets/src/ --ext=js,jsx --fix",
-      "lint:php": "composer phpcs",
-      "lint:php-fix": "composer phpcbf",
-      "reformat-files": "prettier --ignore-path .eslintignore --write \"**/*.{js,jsx,json,ts,tsx}\"",
-      "makepot": "wp i18n make-pot . languages/block-data-attribute-js.pot --exclude=node_modules,vendor,dist",
-      "makepot:php": "npx pot-to-php languages/block-data-attribute-js.pot languages/block-data-attribute-translations.php block-data-attribute"
-   },
-   "devDependencies": {
-      "@babel/core": "7.8.3",
-      "@babel/plugin-proposal-object-rest-spread": "7.7.4",
-      "@wordpress/babel-plugin-makepot": "^3.4.0",
-      "@wordpress/babel-preset-default": "4.10.0",
-      "@wordpress/eslint-plugin": "^3.4.1",
-      "@wordpress/browserslist-config": "^2.6.0",
-      "@wordpress/dependency-extraction-webpack-plugin": "^2.1.0",
-      "@wordpress/i18n": "3.9.0",
-      "babel-core": "7.0.0-bridge.0",
-      "babel-eslint": "10.0.3",
-      "babel-loader": "8.0.6",
-      "cross-env": "6.0.3",
-      "chalk": "^3.0.0",
-      "classnames": "^2.2.6",
-      "clean-webpack-plugin": "^3.0.0",
-      "eslint": "^6.1.0",
-      "lodash": "^4.17.15",
-      "progress-bar-webpack-plugin": "^2.1.0",
-      "uglifyjs-webpack-plugin": "^2.2.0",
-      "webpack": "^4.41.5",
-      "webpack-bundle-analyzer": "^3.3.2",
-      "webpack-cli": "^3.3.10"
-   },
-   "dependencies": {
-      "es6-object-assign": "^1.1.0",
-      "lodash.escape": "^4.0.1"
-   },
-   "browserslist": [
-      "extends @wordpress/browserslist-config"
-   ],
-   "engines": {
-      "node": ">=10.10.0",
-      "npm": ">=6.4.0"
-   },
-   "eslintConfig": {
-      "extends": "wordpress"
-   }
+	"name": "block-data-attribute",
+	"title": "Block Data Attribute",
+	"description": "This plugin designed with extensibility in mind for data that should be associated with a particular block type but need not have any defined meaning.",
+	"version": "1.0.2",
+	"author": "MyPreview",
+	"author_shop": "https://www.mypreview.one",
+	"author_uri": "https://www.upwork.com/o/profiles/users/_~016ad17ad3fc5cce94",
+	"requires": "5.2",
+	"tested_up_to": "5.4.0",
+	"license": "GPL-3.0",
+	"copyright": "© 2015 - 2020 MyPreview. All Rights Reserved.",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mypreview/block-data-attribute.git"
+	},
+	"bugs": {
+		"url": "https://github.com/mypreview/block-data-attribute/issues"
+	},
+	"scripts": {
+		"dev": "cross-env BABEL_ENV=default webpack --watch --info-verbosity none",
+		"build": "cross-env BABEL_ENV=default NODE_ENV=production webpack",
+		"lint:js": "eslint src/ --ext=js,jsx",
+		"lint:js-fix": "eslint src/ --ext=js,jsx --fix",
+		"lint:wpcs": "composer lint:wpcs",
+		"lint:wpcs-fix": "composer lint:wpcbf",
+		"lint:php": "composer lint:php",
+		"makepot": "composer make-pot",
+		"reformat-files": "prettier --ignore-path .eslintignore --write \"**/*.{js,jsx,json,ts,tsx}\""
+	},
+	"devDependencies": {
+		"@babel/core": "7.8.3",
+		"@babel/plugin-proposal-object-rest-spread": "7.7.4",
+		"@wordpress/babel-preset-default": "4.10.0",
+		"@wordpress/eslint-plugin": "^3.4.1",
+		"@wordpress/browserslist-config": "^2.6.0",
+		"@wordpress/dependency-extraction-webpack-plugin": "^2.1.0",
+		"@wordpress/dom": "2.8.0",
+		"@wordpress/dom-ready": "2.7.0",
+		"@wordpress/i18n": "3.9.0",
+		"babel-core": "7.0.0-bridge.0",
+		"babel-eslint": "10.0.3",
+		"babel-loader": "8.0.6",
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"cross-env": "6.0.3",
+		"chalk": "^3.0.0",
+		"classnames": "^2.2.6",
+		"clean-webpack-plugin": "^3.0.0",
+		"eslint": "6.8.0",
+		"eslint-config-prettier": "6.10.0",
+		"prettier": "npm:wp-prettier@1.19.1",
+		"progress-bar-webpack-plugin": "^2.1.0",
+		"uglifyjs-webpack-plugin": "^2.2.0",
+		"webpack": "^4.41.5",
+		"webpack-notifier": "^1.8.0",
+		"webpack-bundle-analyzer": "^3.3.2",
+		"webpack-cli": "^3.3.10"
+	},
+	"dependencies": {
+		"es6-object-assign": "^1.1.0",
+		"lodash.escape": "^4.0.1"
+	},
+	"browserslist": [
+		"extends @wordpress/browserslist-config"
+	],
+	"engines": {
+		"node": ">=10.10.0",
+		"npm": ">=6.4.0"
+	},
+	"eslintConfig": {
+		"extends": "wordpress"
+	}
 }
