@@ -13,7 +13,7 @@ const UglifyJsPlugin = require( 'uglifyjs-webpack-plugin' );
 const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
 const WebpackNotifierPlugin = require( 'webpack-notifier' );
 const chalk = require( 'chalk' );
-const package = 'Flydent Extras';
+const package = 'Block Data Attribute';
 const jsonp = 'webpackBlockDataAttributeJsonp';
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
