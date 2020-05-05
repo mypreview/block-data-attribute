@@ -5,9 +5,8 @@
  */
 import get from 'lodash/get';
 import times from 'lodash/times';
-// eslint-disable-next-line no-unused-vars
 import includes from 'lodash/includes';
-import escape from 'lodash.escape';
+import escape from 'lodash/escape';
 import allowedBlocks from './allowedBlocks';
 
 /**
@@ -28,7 +27,7 @@ function addSaveProps( extraProps, blockType, attributes ) {
 	const extraAttrs = {};
 	const { bdaLimit: limit, bdaData: data } = attributes;
 
-	if ( allowedBlocks.includes( blockType.name ) ) {
+	if ( includes( allowedBlocks, blockType.name ) ) {
 		const filterData = data.filter( ( o ) => o.value );
 		{
 			times( limit, ( index ) => {

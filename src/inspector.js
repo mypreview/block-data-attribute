@@ -3,11 +3,10 @@
  */
 import get from 'lodash/get';
 import times from 'lodash/times';
-// eslint-disable-next-line no-unused-vars
+import assign from 'lodash/assign';
 import includes from 'lodash/includes';
 import withSelect from './withSelect';
 import allowedBlocks from './allowedBlocks';
-require( 'es6-object-assign/auto' );
 
 /**
  * WordPress dependencies
@@ -24,7 +23,7 @@ const { PanelBody, BaseControl, HorizontalRule, TextControl, RangeControl } = wp
  * It receives the original block BlockEdit component and returns a new wrapped component.
  *
  * @param  	{Function} 	BlockEdit 		Original component.
- * @return 	{string}            					Wrapped component.
+ * @return 	{string}            		Wrapped component.
  */
 const addControls = createHigherOrderComponent( ( BlockEdit ) => {
 	return withSelect( ( { ...props } ) => {
@@ -36,7 +35,7 @@ const addControls = createHigherOrderComponent( ( BlockEdit ) => {
 			const oldData = attributes.bdaData,
 				newData = oldData.slice();
 
-			newData[ index ] = Object.assign( {}, oldData[ index ] );
+			newData[ index ] = assign( {}, oldData[ index ] );
 			newData[ index ][ key ] = value;
 			setAttributes( { bdaData: [ ...newData ] } );
 		};
@@ -46,7 +45,7 @@ const addControls = createHigherOrderComponent( ( BlockEdit ) => {
 				<BlockEdit { ...props } />
 				{ isSelected && (
 					<Fragment>
-						{ allowedBlocks.includes( getSelectedBlock.name ) && (
+						{ includes( allowedBlocks, getSelectedBlock.name ) && (
 							<InspectorControls>
 								<PanelBody
 									title={ __( 'Data Attributes', 'block-data-attribute' ) }

@@ -3,8 +3,9 @@
 /**
  * External dependencies
  */
-// eslint-disable-next-line no-unused-vars
+import assign from 'lodash/assign';
 import includes from 'lodash/includes';
+import isUndefined from 'lodash/isUndefined';
 import allowedBlocks from './allowedBlocks';
 
 /**
@@ -20,11 +21,11 @@ const { addFilter } = wp.hooks;
  * @return 	{Object} 			   		Filtered block settings.
  */
 function addAttributes( blockSettings ) {
-	if ( 'undefined' === typeof blockSettings.attributes || ! allowedBlocks.includes( blockSettings.name ) )
+	if ( isUndefined( blockSettings.attributes ) || ! includes( allowedBlocks, blockSettings.name ) )
 		return blockSettings;
 
-	return lodash.assign( {}, blockSettings, {
-		attributes: lodash.assign( {}, blockSettings.attributes, {
+	return assign( {}, blockSettings, {
+		attributes: assign( {}, blockSettings.attributes, {
 			bdaLimit: {
 				type: 'number',
 				default: 1,
