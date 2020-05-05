@@ -3,7 +3,7 @@ Contributors: mahdiyazdani, mypreview, gookaani
 Tags: add a data attribute,data-attribute tag,custom attribute
 Donate link: https://www.mypreview.one
 Requires at least: 5.2
-Tested up to: 5.4.0
+Tested up to: 5.4.1
 Requires PHP: 7.2
 Stable tag: 1.0.3
 License: GPLv3 or later
