@@ -56,10 +56,6 @@
 		"webpack-bundle-analyzer": "^3.3.2",
 		"webpack-cli": "^3.3.10"
 	},
-	"dependencies": {
-		"es6-object-assign": "^1.1.0",
-		"lodash.escape": "^4.0.1"
-	},
 	"browserslist": [
 		"extends @wordpress/browserslist-config"
 	],
