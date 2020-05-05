@@ -84,6 +84,7 @@ I am a full-stack developer with over five years of experience in WordPress them
 == Changelog ==
 = 1.0.3 =
 * Multiple code standards improvements.
+* Compatibility with WordPress 5.4.1
 
 = 1.0.2 =
 * Multiple code standards improvements.
