@@ -1,10 +1,7 @@
 /**
  * External dependencies
  */
-import get from 'lodash/get';
-import times from 'lodash/times';
-import assign from 'lodash/assign';
-import includes from 'lodash/includes';
+import { get, times, assign, includes } from 'lodash';
 import withSelect from './withSelect';
 import allowedBlocks from './allowedBlocks';
 

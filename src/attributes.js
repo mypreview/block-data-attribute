@@ -1,11 +1,7 @@
-/* global lodash */
-
 /**
  * External dependencies
  */
-import assign from 'lodash/assign';
-import includes from 'lodash/includes';
-import isUndefined from 'lodash/isUndefined';
+import { assign, includes, isUndefined } from 'lodash';
 import allowedBlocks from './allowedBlocks';
 
 /**

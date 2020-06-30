@@ -1,12 +1,7 @@
-/* global lodash */
-
 /**
  * External dependencies
  */
-import get from 'lodash/get';
-import times from 'lodash/times';
-import includes from 'lodash/includes';
-import escape from 'lodash/escape';
+import { get, times, includes, escape, filter, assign } from 'lodash';
 import allowedBlocks from './allowedBlocks';
 
 /**
@@ -28,7 +23,7 @@ function addSaveProps( extraProps, blockType, attributes ) {
 	const { bdaLimit: limit, bdaData: data } = attributes;
 
 	if ( includes( allowedBlocks, blockType.name ) ) {
-		const filterData = data.filter( ( o ) => o.value );
+		const filterData = filter( data, ( o ) => o.value );
 		{
 			times( limit, ( index ) => {
 				const key = get( filterData, [ index, 'key' ] ),
@@ -39,7 +34,7 @@ function addSaveProps( extraProps, blockType, attributes ) {
 		}
 	} // End If Statement
 
-	return lodash.assign( extraProps, extraAttrs );
+	return assign( extraProps, extraAttrs );
 }
 
 addFilter( 'blocks.getSaveContent.extraProps', 'block-data-attribute/save', addSaveProps );
