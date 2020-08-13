@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { get, times, includes, escape, filter, assign } from 'lodash';
+import { get, times, has, includes, escape, filter, assign } from 'lodash';
 import allowedBlocks from './allowedBlocks';
 
 /**
@@ -23,7 +23,7 @@ function addSaveProps( extraProps, blockType, attributes ) {
 	const { bdaLimit: limit, bdaData: data } = attributes;
 
 	if ( includes( allowedBlocks, blockType.name ) ) {
-		const filterData = filter( data, ( o ) => o.value );
+		const filterData = filter( data, ( o ) => ( has( o, 'value' ) ? o.value : null ) );
 		{
 			times( limit, ( index ) => {
 				const key = get( filterData, [ index, 'key' ] ),
