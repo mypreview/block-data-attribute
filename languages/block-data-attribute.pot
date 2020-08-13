@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Block Data Attribute 1.0.2\n"
+"Project-Id-Version: Block Data Attribute 1.0.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/block-data-attribute\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-04-24T23:25:31+00:00\n"
+"POT-Creation-Date: 2020-08-13T22:36:56+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: block-data-attribute\n"
@@ -31,49 +31,49 @@ msgid "MyPreview"
 msgstr ""
 
 #. Author URI of the plugin
-msgid "https://www.upwork.com/o/profiles/users/_~016ad17ad3fc5cce94"
+msgid "https://mahdiyazdani.com"
 msgstr ""
 
-#: block-data-attribute.php:115
+#: block-data-attribute.php:110
 msgctxt "clone"
 msgid "Cloning instances of this class is forbidden."
 msgstr ""
 
-#: block-data-attribute.php:127
+#: block-data-attribute.php:120
 msgctxt "wakeup"
 msgid "Unserializing instances of this class is forbidden."
 msgstr ""
 
 #. translators: 1: Open anchor tag, 2: Close anchor tag.
-#: block-data-attribute.php:177
+#: block-data-attribute.php:164
 msgctxt "plugin link"
 msgid "%1$sHire Me!%2$s"
 msgstr ""
 
 #. translators: 1: Open anchor tag, 2: Close anchor tag.
-#: block-data-attribute.php:177
+#: block-data-attribute.php:164
 msgctxt "upsell"
 msgid "Looking for help? Hire Me!"
 msgstr ""
 
 #. translators: 1: Open anchor tag, 2: Close anchor tag.
-#: block-data-attribute.php:179
+#: block-data-attribute.php:166
 msgctxt "plugin link"
 msgid "%1$sSupport%2$s"
 msgstr ""
 
-#: src/inspector.js:52
+#: src/inspector.js:55
 msgid "Data Attributes"
 msgstr ""
 
-#: src/inspector.js:56
+#: src/inspector.js:59
 msgid "Number of Attributes"
 msgstr ""
 
-#: src/inspector.js:73
+#: src/inspector.js:76
 msgid "Key"
 msgstr ""
 
-#: src/inspector.js:78
+#: src/inspector.js:81
 msgid "Value"
 msgstr ""
