@@ -9,7 +9,7 @@ const path = require( 'path' );
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
 const { BundleAnalyzerPlugin } = require( 'webpack-bundle-analyzer' );
 const ProgressBarPlugin = require( 'progress-bar-webpack-plugin' );
-const UglifyJsPlugin = require( 'uglifyjs-webpack-plugin' );
+const TerserPlugin = require( 'terser-webpack-plugin' );
 const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
 const WebpackNotifierPlugin = require( 'webpack-notifier' );
 const chalk = require( 'chalk' );
@@ -51,22 +51,15 @@ const config = {
 			{
 				test: /\.jsx?$/,
 				exclude: /node_modules/,
-				use: {
-					loader: 'babel-loader?cacheDirectory',
-					options: {
-						presets: [ '@wordpress/babel-preset-default' ],
-						plugins: [
-							[ 'transform-class-properties' ],
-							[
-								'@babel/plugin-proposal-object-rest-spread',
-								{
-									loose: true,
-									useBuiltIns: true,
-								},
-							],
-						],
+				use: [
+					require.resolve( 'thread-loader' ),
+					{
+						loader: require.resolve( 'babel-loader' ),
+						options: {
+							cacheDirectory: process.env.BABEL_CACHE_DIRECTORY || true,
+						},
 					},
-				},
+				],
 			},
 		],
 	},
@@ -76,16 +69,10 @@ const config = {
 		'window.jQuery': 'jquery',
 	},
 	optimization: {
+		minimize: true,
 		minimizer: [
-			new UglifyJsPlugin( {
-				cache: true,
-				parallel: true,
-				uglifyOptions: {
-					output: {
-						ie8: false,
-						comments: false,
-					},
-				},
+			new TerserPlugin( {
+				extractComments: false,
 			} ),
 		],
 	},
