@@ -1,11 +1,11 @@
 === Block Data Attribute ===
 Contributors: mahdiyazdani, mypreview, gookaani
-Tags: add a data attribute,data-attribute tag,custom attribute
+Tags: blocks, gutenberg, gutenberg blocks, block-editor, attribute, data
 Donate link: https://www.mypreview.one
 Requires at least: 5.2
-Tested up to: 5.4.1
+Tested up to: 5.5
 Requires PHP: 7.2
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -19,7 +19,7 @@ This plugin designed with extensibility in mind for data that should be associat
 
 * PHP version 7.2 or greater.
 * MySQL version 5.6 or greater or MariaDB version 10.0 or greater.
-* WordPress version 5.0 or greater.
+* WordPress version 5.2 or greater.
 
 = Automatic installation =
 
@@ -74,14 +74,16 @@ Here’s the [GitHub development repository &#8594;](https://github.com/myprevie
 Please share your experience by leaving this plugin [5 shining stars](https://wordpress.org/support/plugin/block-data-attribute/reviews/ "Rate Block Data Attribute 5 stars") if you like it, thanks!
 
 = I need help customizing this plugin? =
-I am a full-stack developer with over five years of experience in WordPress theme and plugin development and customization. I would love to have the opportunity to discuss your project with you.
-
-[Hire me on UpWork &#8594;](https://www.upwork.com/o/profiles/users/_~016ad17ad3fc5cce94/ "Mahdi Yazdani Freelancer Profile")
+Professional engineer and independent creative technologist in tech · over 6 years experience working from prototype to production · developing WordPress products, services, and eCommerce solutions · [available for hire &#8594;](https://mahdiyazdani.com "Mahdi Yazdani’s personal website")
 
 == Screenshots ==
 1. Plugin Settings
 
 == Changelog ==
+= 1.0.4 =
+* Updated node modules.
+* Compatibility with WordPress 5.5
+
 = 1.0.3 =
 * Multiple code standards improvements.
 * Compatibility with WordPress 5.4.1
