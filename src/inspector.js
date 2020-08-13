@@ -1,7 +1,8 @@
 /**
  * External dependencies
  */
-import { get, times, assign, includes } from 'lodash';
+import slugify from 'slugify';
+import { get, times, slice, assign, includes } from 'lodash';
 import withSelect from './withSelect';
 import allowedBlocks from './allowedBlocks';
 
@@ -14,6 +15,12 @@ const { Fragment } = wp.element;
 const { createHigherOrderComponent } = wp.compose;
 const { InspectorControls } = wp.blockEditor;
 const { PanelBody, BaseControl, HorizontalRule, TextControl, RangeControl } = wp.components;
+const SLUGIFY_OPTIONS = {
+	replacement: '-', 	// Replace spaces with replacement character.
+	remove: undefined, 	// Remove characters that match regex.
+	lower: true, 		// Convert to lower case.
+	strict: false, 		// Strip special characters except replacement.
+};
 
 /**
  * Used to modify the block’s edit component.
@@ -33,8 +40,8 @@ const addControls = createHigherOrderComponent( ( BlockEdit ) => {
 				newData = oldData.slice();
 
 			newData[ index ] = assign( {}, oldData[ index ] );
-			newData[ index ][ key ] = value;
-			setAttributes( { bdaData: [ ...newData ] } );
+			newData[ index ][ key ] = slugify( value, SLUGIFY_OPTIONS );
+			setAttributes( { bdaData: [ ...slice( newData, 0, limit ) ] } );
 		};
 
 		return (
