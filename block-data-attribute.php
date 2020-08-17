@@ -22,7 +22,7 @@
  * Plugin Name:             Block Data Attribute
  * Plugin URI:              https://www.mypreview.one
  * Description:             This plugin designed with extensibility in mind for data that should be associated with a particular block type but need not have any defined meaning.
- * Version:                 1.0.4
+ * Version:                 1.0.5
  * Author:                  MyPreview
  * Author URI:              https://mahdiyazdani.com
  * License:                 GPL-3.0
