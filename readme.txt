@@ -5,7 +5,7 @@ Donate link: https://www.mypreview.one
 Requires at least: 5.2
 Tested up to: 5.5
 Requires PHP: 7.2
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -74,12 +74,17 @@ Here’s the [GitHub development repository &#8594;](https://github.com/myprevie
 Please share your experience by leaving this plugin [5 shining stars](https://wordpress.org/support/plugin/block-data-attribute/reviews/ "Rate Block Data Attribute 5 stars") if you like it, thanks!
 
 = I need help customizing this plugin? =
-Professional engineer and independent creative technologist in tech · over 6 years experience working from prototype to production · developing WordPress products, services, and eCommerce solutions · [available for hire &#8594;](https://mahdiyazdani.com "Mahdi Yazdani’s personal website")
+Professional engineer and independent creative technologist in tech · over 6 years experience working from prototype to production · developing WordPress products, services, and eCommerce solutions.
+
+[Available for hire &#8594;](https://mahdiyazdani.com "Mahdi Yazdani’s personal website")
 
 == Screenshots ==
 1. Plugin Settings
 
 == Changelog ==
+= 1.0.5 =
+* Fixed incorrect escaping in data `value` attribute pair.
+
 = 1.0.4 =
 * Updated node modules.
 * Compatibility with WordPress 5.5
