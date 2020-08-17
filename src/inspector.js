@@ -2,7 +2,7 @@
  * External dependencies
  */
 import slugify from 'slugify';
-import { get, times, slice, assign, includes } from 'lodash';
+import { get, times, slice, assign, escape, includes } from 'lodash';
 import withSelect from './withSelect';
 import allowedBlocks from './allowedBlocks';
 
@@ -35,12 +35,12 @@ const addControls = createHigherOrderComponent( ( BlockEdit ) => {
 
 		const { bdaLimit: limit, bdaData: data } = attributes;
 
-		const onChange = ( value, key, index ) => {
+		const onChange = ( value, key, index, isSlugify = false ) => {
 			const oldData = attributes.bdaData,
 				newData = oldData.slice();
 
 			newData[ index ] = assign( {}, oldData[ index ] );
-			newData[ index ][ key ] = slugify( value, SLUGIFY_OPTIONS );
+			newData[ index ][ key ] = !! isSlugify ? slugify( value, SLUGIFY_OPTIONS ) : escape( value );
 			setAttributes( { bdaData: [ ...slice( newData, 0, limit ) ] } );
 		};
 
@@ -75,7 +75,9 @@ const addControls = createHigherOrderComponent( ( BlockEdit ) => {
 													<TextControl
 														label={ __( 'Key', 'block-data-attribute' ) }
 														value={ key }
-														onChange={ ( newValue ) => onChange( newValue, 'key', index ) }
+														onChange={ ( newValue ) =>
+															onChange( newValue, 'key', index, true )
+														}
 													/>
 													<TextControl
 														label={ __( 'Value', 'block-data-attribute' ) }
