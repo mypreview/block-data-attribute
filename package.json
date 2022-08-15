@@ -1,71 +1,58 @@
 {
-	"name": "block-data-attribute",
-	"title": "Block Data Attribute",
-	"description": "This plugin designed with extensibility in mind for data that should be associated with a particular block type but need not have any defined meaning.",
-	"version": "1.0.5",
-	"author": "MyPreview",
-	"author_shop": "https://www.mypreview.one",
-	"author_uri": "https://mahdiyazdani.com",
-	"requires": "5.2",
-	"tested_up_to": "5.5",
-	"license": "GPL-3.0",
-	"copyright": "© 2015 - 2020 MyPreview. All Rights Reserved.",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/mypreview/block-data-attribute.git"
-	},
+	"name": "@mypreview/block-data-attribute",
+	"version": "2.0.0",
+	"private": true,
+	"homepage": "https://github.com/mypreview/block-data-attribute#readme",
 	"bugs": {
 		"url": "https://github.com/mypreview/block-data-attribute/issues"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mypreview/block-data-attribute.git"
+	},
+	"license": "GPL-3.0-or-later",
+	"author": "Mahdi Yazdani",
 	"scripts": {
-		"dev": "cross-env BABEL_ENV=default webpack --watch --info-verbosity none",
-		"build": "cross-env BABEL_ENV=default NODE_ENV=production webpack",
-		"lint:js": "eslint src/ --ext=js,jsx",
-		"lint:js-fix": "eslint src/ --ext=js,jsx --fix",
+		"archive": "npm run prepare && rm -rf $npm_package_name && composer archive --file=$npm_package_name --format=zip",
+		"build": "wp-scripts build",
+		"dev": "wp-scripts start",
+		"format": "wp-scripts format",
+		"lint:js": "wp-scripts lint-js",
+		"lint:js-fix": "wp-scripts lint-js --fix",
+		"lint:php": "composer lint:php",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"lint:wpcs": "composer lint:wpcs",
 		"lint:wpcs-fix": "composer lint:wpcbf",
-		"lint:php": "composer lint:php",
 		"makepot": "composer make-pot",
-		"reformat-files": "prettier --ignore-path .eslintignore --write \"**/*.{js,jsx,json,ts,tsx}\""
+		"packages-update": "wp-scripts packages-update",
+		"prepare": "npm run format && npm run lint:js-fix && npm run lint:wpcs-fix && npm run build"
 	},
-	"devDependencies": {
-		"@babel/core": "7.11.1",
-		"@babel/plugin-proposal-class-properties": "^7.8.3",
-		"@babel/plugin-proposal-object-rest-spread": "7.11.0",
-		"@wordpress/babel-preset-default": "4.17.0",
-		"@wordpress/eslint-plugin": "^7.1.0",
-		"@wordpress/browserslist-config": "^2.7.0",
-		"@wordpress/dependency-extraction-webpack-plugin": "^2.8.0",
-		"@wordpress/i18n": "3.14.0",
-		"babel-core": "7.0.0-bridge.0",
-		"babel-eslint": "10.1.0",
-		"babel-loader": "8.1.0",
-		"cross-env": "7.0.2",
-		"chalk": "^4.1.0",
-		"classnames": "^2.2.6",
-		"clean-webpack-plugin": "^3.0.0",
-		"eslint": "7.6.0",
-		"eslint-config-prettier": "6.11.0",
-		"prettier": "npm:wp-prettier@2.0.5",
-		"progress-bar-webpack-plugin": "^2.1.0",
-		"terser-webpack-plugin": "^3.0.1",
-		"thread-loader": "^2.1.3",
-		"webpack": "^4.44.1",
-		"webpack-notifier": "^1.8.0",
-		"webpack-bundle-analyzer": "^3.8.0",
-		"webpack-cli": "^3.3.12"
-	},
-	"browserslist": [
-		"extends @wordpress/browserslist-config"
-	],
-	"engines": {
-		"node": ">=10.10.0",
-		"npm": ">=6.4.0"
-	},
-	"eslintConfig": {
-		"extends": "wordpress"
+	"lint-staged": {
+		"*.{js,ts,tsx}": [
+			"npm run format"
+		],
+		"*.php": [
+			"npm run lint:wpcs"
+		]
 	},
 	"dependencies": {
-		"slugify": "^1.4.5"
+		"@mypreview/unicorn-js-utils": "1.1.0",
+		"@mypreview/unicorn-react-components": "1.2.1",
+		"@wordpress/block-editor": "9.7.0",
+		"@wordpress/components": "19.17.0",
+		"@wordpress/compose": "5.13.0",
+		"@wordpress/hooks": "3.15.0",
+		"@wordpress/i18n": "4.15.0",
+		"lodash": "4.17.21",
+		"prop-types": "15.8.1"
+	},
+	"devDependencies": {
+		"@emotion/babel-plugin-jsx-pragmatic": "0.2.0",
+		"@emotion/babel-preset-css-prop": "11.10.0",
+		"@emotion/react": "11.10.0",
+		"@wordpress/scripts": "23.7.1",
+		"husky": "8.0.1",
+		"lint-staged": "13.0.3",
+		"prettier": "npm:wp-prettier@^2.6.2"
 	}
 }
