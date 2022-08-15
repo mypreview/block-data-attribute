@@ -1,20 +1,21 @@
-# Copyright (C) 2020 MyPreview
-# This file is distributed under the GPL-3.0.
+# Copyright (C) 2022 Mahdi Yazdani
+# This file is distributed under the GPL-3.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: Block Data Attribute 1.0.4\n"
+"Project-Id-Version: Block Data Attribute 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/block-data-attribute\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-08-13T22:36:56+00:00\n"
+"POT-Creation-Date: 2022-08-15T14:18:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.4.0\n"
+"X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: block-data-attribute\n"
 
 #. Plugin Name of the plugin
+#: src/components/Inspector.js:29
 msgid "Block Data Attribute"
 msgstr ""
 
@@ -27,53 +28,38 @@ msgid "This plugin designed with extensibility in mind for data that should be a
 msgstr ""
 
 #. Author of the plugin
-msgid "MyPreview"
+msgid "Mahdi Yazdani"
 msgstr ""
 
 #. Author URI of the plugin
-msgid "https://mahdiyazdani.com"
-msgstr ""
-
-#: block-data-attribute.php:110
-msgctxt "clone"
-msgid "Cloning instances of this class is forbidden."
-msgstr ""
-
-#: block-data-attribute.php:120
-msgctxt "wakeup"
-msgid "Unserializing instances of this class is forbidden."
+msgid "https://www.mahdiyazdani.com"
 msgstr ""
 
 #. translators: 1: Open anchor tag, 2: Close anchor tag.
-#: block-data-attribute.php:164
+#: block-data-attribute.php:94
 msgctxt "plugin link"
-msgid "%1$sHire Me!%2$s"
+msgid "%1$sCommunity support%2$s"
 msgstr ""
 
 #. translators: 1: Open anchor tag, 2: Close anchor tag.
-#: block-data-attribute.php:164
-msgctxt "upsell"
-msgid "Looking for help? Hire Me!"
-msgstr ""
-
-#. translators: 1: Open anchor tag, 2: Close anchor tag.
-#: block-data-attribute.php:166
+#: block-data-attribute.php:96
 msgctxt "plugin link"
-msgid "%1$sSupport%2$s"
+msgid "%1$sDonate%2$s"
 msgstr ""
 
-#: src/inspector.js:55
-msgid "Data Attributes"
+#. translators: 1: Open anchor tag, 2: Close anchor tag.
+#: block-data-attribute.php:96
+msgid "Donate to support this plugin"
 msgstr ""
 
-#: src/inspector.js:59
-msgid "Number of Attributes"
+#: src/components/Inspector.js:33
+msgid "Add attribute"
 msgstr ""
 
-#: src/inspector.js:76
-msgid "Key"
+#: src/components/Inspector.js:36
+msgid "Name"
 msgstr ""
 
-#: src/inspector.js:81
+#: src/components/Inspector.js:39
 msgid "Value"
 msgstr ""
