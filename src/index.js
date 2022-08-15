@@ -1,3 +1,3 @@
-import './attributes';
-import './inspector';
+import './configuration/attributes';
+import './edit';
 import './save';
