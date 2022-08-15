@@ -34,11 +34,11 @@ We welcome contributions in any form, and you can help reporting, testing, and d
 
 All support is handled via a dedicated support forum, available at [Community Forums](https://wordpress.org/support/plugin/block-data-attribute "Community Forums"). Please head out there to open a new topic, in case you have any questions.
 
-## Rate ⭐⭐⭐⭐⭐
+## Rate
 
-Please share your experience by leaving this plugin [5 shining stars](https://wordpress.org/support/plugin/block-data-attribute/reviews/ "Rate Block Data Attribute 5 stars") if you like it, thanks!
+Please share your experience by leaving this plugin [5 shining stars ⭐⭐⭐⭐⭐](https://wordpress.org/support/plugin/block-data-attribute/reviews/ "Rate Block Data Attribute 5 stars") if you like it, thanks!
 
---AND/OR--
+## Donate
 
 If you or your company use any of my projects or like what I’m doing, please consider [making a donation](https://www.buymeacoffee.com/mahdiyazdani) so I can continue maintaining and evolving all my projects and new ones. I’m in this for the long run. 
 
