@@ -1,11 +1,11 @@
 === Block Data Attribute ===
 Contributors: mahdiyazdani, mypreview, gookaani
 Tags: blocks, gutenberg, gutenberg blocks, block-editor, attribute, data
-Donate link: https://www.mypreview.one
-Requires at least: 5.2
-Tested up to: 5.5
-Requires PHP: 7.2
-Stable tag: 1.0.5
+Donate link: https://www.buymeacoffee.com/mahdiyazdani
+Requires at least: 5.5
+Tested up to: 6.0
+Requires PHP: 7.4
+Stable tag: 2.0.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -17,9 +17,9 @@ This plugin designed with extensibility in mind for data that should be associat
 == Installation ==
 = Minimum Requirements =
 
-* PHP version 7.2 or greater.
+* PHP version 7.4 or greater.
 * MySQL version 5.6 or greater or MariaDB version 10.0 or greater.
-* WordPress version 5.2 or greater.
+* WordPress version 5.5 or greater.
 
 = Automatic installation =
 
@@ -42,16 +42,24 @@ Automatic updates should work smoothly, but we still recommend you back up your 
 3. Click on the “Add Block” button and select the “Button” block. Alternatively, you can start typing `/button` in a new paragraph block, then press enter.
 4. Once you’ve inserted the block, you can use the block settings sidebar to add your custom data attribute.
 5. Clicking on the `⚙` cog icon next to the publish button will toggle the visibility of this sidebar.
-6. In the block sidebar, you can expand the `Data Attributes` section to add custom attributes as needed.
+6. In the block sidebar, you can expand the `Block Data Attribute` section to add custom attributes as needed.
 7. Publish the page.
+
+*Note that this section is not limited to attribute names prefixed with the “data” keyword, as you are free to add any valid HTML attribute that you might want to include as part of the block’s wrapper tag on the frontend.*
 
 = Which blocks are allowed to accept custom data attributes? =
 Currently, custom data attributes can be saved within the following blocks:
 
+* `core/button` 
+* `core/column` 
+* `core/columns` 
+* `core/heading` 
+* `core/group` 
 * `core/paragraph`
-* `core/heading`
-* `core/button`
-* `core/group`
+
+Generally, this would be possible due to a JavaScript hooks system with WordPress that includes block filters and several other types of filters available via JavaScript.
+
+You can extend the predefined list of block names by hooking into the `mypreview.blockDataAttributeAllowedBlocks` filter provided by the plugin.
 
 = How do I get help with the plugin? =
 The easiest way to receive support is to “Create a new topic” by visiting Community Forums page [here](https://wordpress.org/support/plugin/block-data-attribute "Block Data Attribute Support Forum").
@@ -71,10 +79,14 @@ We welcome contributions in any form, and you can help reporting, testing, and d
 Here’s the [GitHub development repository &#8594;](https://github.com/mypreview/block-data-attribute "GitHub development repository")
 
 = Did you like the idea behind this plugin? =
+If you or your company use any of my projects or like what I’m doing, please consider [making a donation](https://www.buymeacoffee.com/mahdiyazdani) so I can continue maintaining and evolving all my projects and new ones. I’m in this for the long run. 
+
+--AND/OR--
+
 Please share your experience by leaving this plugin [5 shining stars](https://wordpress.org/support/plugin/block-data-attribute/reviews/ "Rate Block Data Attribute 5 stars") if you like it, thanks!
 
 = I need help customizing this plugin? =
-Professional engineer and independent creative technologist in tech · over 6 years experience working from prototype to production · developing WordPress products, services, and eCommerce solutions.
+Professional engineer and independent creative technologist in tech · over 7 years experience working from prototype to production · developing WordPress products, services, and eCommerce solutions.
 
 [Available for hire &#8594;](https://mahdiyazdani.com "Mahdi Yazdani’s personal website")
 
@@ -82,6 +94,12 @@ Professional engineer and independent creative technologist in tech · over 6 ye
 1. Plugin Settings
 
 == Changelog ==
+= 2.0.0 =
+* Define unlimited number of attributes.
+* Remove limitation for entering `data` prefixed attribute names.
+* Compatibility with WordPress 6.0
+* Updated node modules.
+
 = 1.0.5 =
 * Fixed incorrect escaping in data `value` attribute pair.
 
