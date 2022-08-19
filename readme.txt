@@ -5,7 +5,7 @@ Donate link: https://www.buymeacoffee.com/mahdiyazdani
 Requires at least: 5.5
 Tested up to: 6.0
 Requires PHP: 7.4
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -94,9 +94,11 @@ Professional engineer and independent creative technologist in tech · over 7 ye
 1. Plugin Settings
 
 == Changelog ==
+= 2.0.1 =
+* Added missing `data` keyword from the attribute name. 
+
 = 2.0.0 =
 * Define unlimited number of attributes.
-* Remove limitation for entering `data` prefixed attribute names.
 * Compatibility with WordPress 6.0
 * Updated node modules.
 
@@ -121,3 +123,7 @@ Professional engineer and independent creative technologist in tech · over 7 ye
 
 = 1.0.0 =
 * Initial release.
+
+== Upgrade Notice ==
+= 2.0.0 =
+* Due to necessary and unavoidable underlying code refactoring, upgrading to this version from previous releases would require manual data migration.
