@@ -1,6 +1,6 @@
 {
 	"name": "@mypreview/block-data-attribute",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"private": true,
 	"homepage": "https://github.com/mypreview/block-data-attribute#readme",
 	"bugs": {
@@ -50,7 +50,7 @@
 		"@emotion/babel-plugin-jsx-pragmatic": "0.2.0",
 		"@emotion/babel-preset-css-prop": "11.10.0",
 		"@emotion/react": "11.10.0",
-		"@wordpress/scripts": "23.7.1",
+		"@wordpress/scripts": "23.7.2",
 		"husky": "8.0.1",
 		"lint-staged": "13.0.3",
 		"prettier": "npm:wp-prettier@^2.6.2"
