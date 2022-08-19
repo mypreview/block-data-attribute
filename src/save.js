@@ -26,6 +26,6 @@ function addSaveProps( extraProps, blockType, attributes ) {
 		return extraProps;
 	}
 
-	return assign( {}, extraProps, ...map( normalizeJsonify( blockDataAttribute ), ( { name: attrName, value } ) => ( { [ attrName ]: value } ) ) );
+	return assign( {}, extraProps, ...map( normalizeJsonify( blockDataAttribute ), ( { name: attrName, value } ) => ( { [ `data-${ attrName }` ]: value } ) ) );
 }
 addFilter( 'blocks.getSaveContent.extraProps', 'mypreview/block-data-attribute/save', addSaveProps );
