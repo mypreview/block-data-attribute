@@ -3,9 +3,9 @@ Contributors: mahdiyazdani, mypreview, gookaani
 Tags: blocks, gutenberg, gutenberg blocks, block-editor, attribute, data
 Donate link: https://www.buymeacoffee.com/mahdiyazdani
 Requires at least: 5.5
-Tested up to: 6.0
+Tested up to: 6.1
 Requires PHP: 7.4
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -91,6 +91,9 @@ Professional engineer and independent creative technologist in tech · over 7 ye
 [Available for hire &#8594;](https://mahdiyazdani.com "Mahdi Yazdani’s personal website")
 
 == Screenshots ==
+= 2.0.2 =
+* Compatibility with WordPress 6.1
+
 1. Plugin Settings
 
 == Changelog ==
