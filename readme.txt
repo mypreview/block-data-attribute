@@ -3,9 +3,9 @@ Contributors: mahdiyazdani, mypreview, gookaani
 Tags: blocks, gutenberg, gutenberg blocks, block-editor, attribute, data
 Donate link: https://www.buymeacoffee.com/mahdiyazdani
 Requires at least: 5.5
-Tested up to: 6.0
+Tested up to: 6.1
 Requires PHP: 7.4
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -24,7 +24,7 @@ This plugin designed with extensibility in mind for data that should be associat
 = Automatic installation =
 
 Automatic installation is the easiest option — WordPress will handle the file transfer, and you won’t need to leave your web browser. To do an automatic install of the plugin, log in to your WordPress dashboard, navigate to the Plugins menu, and click “Add New.”
- 
+
 In the search field type “Block Data Attribute”, then click “Search Plugins.” Once you’ve found the plugin, you can view details about it such as the point release, rating, and description. Click “Install Now,” and WordPress will take it from there.
 
 = Manual installation =
@@ -32,7 +32,6 @@ In the search field type “Block Data Attribute”, then click “Search Plugin
 The manual installation method requires downloading the plugin and uploading it to your webserver via your favorite FTP application. The WordPress codex contains [instructions on how to do this here](https://wordpress.org/support/article/managing-plugins/#manual-plugin-installation "Manual plugin installation").
 
 = Updating =
-
 Automatic updates should work smoothly, but we still recommend you back up your site.
 
 == Frequently Asked Questions ==
@@ -45,16 +44,14 @@ Automatic updates should work smoothly, but we still recommend you back up your 
 6. In the block sidebar, you can expand the `Block Data Attribute` section to add custom attributes as needed.
 7. Publish the page.
 
-*Note that this section is not limited to attribute names prefixed with the “data” keyword, as you are free to add any valid HTML attribute that you might want to include as part of the block’s wrapper tag on the frontend.*
-
 = Which blocks are allowed to accept custom data attributes? =
 Currently, custom data attributes can be saved within the following blocks:
 
-* `core/button` 
-* `core/column` 
-* `core/columns` 
-* `core/heading` 
-* `core/group` 
+* `core/button`
+* `core/column`
+* `core/columns`
+* `core/heading`
+* `core/group`
 * `core/paragraph`
 
 Generally, this would be possible due to a JavaScript hooks system with WordPress that includes block filters and several other types of filters available via JavaScript.
@@ -79,23 +76,21 @@ We welcome contributions in any form, and you can help reporting, testing, and d
 Here’s the [GitHub development repository &#8594;](https://github.com/mypreview/block-data-attribute "GitHub development repository")
 
 = Did you like the idea behind this plugin? =
-If you or your company use any of my projects or like what I’m doing, please consider [making a donation](https://www.buymeacoffee.com/mahdiyazdani) so I can continue maintaining and evolving all my projects and new ones. I’m in this for the long run. 
+If you or your company use any of my projects or like what I’m doing, please consider [making a donation](https://www.buymeacoffee.com/mahdiyazdani) so I can continue maintaining and evolving all my projects and new ones. I’m in this for the long run.
 
 --AND/OR--
 
 Please share your experience by leaving this plugin [5 shining stars](https://wordpress.org/support/plugin/block-data-attribute/reviews/ "Rate Block Data Attribute 5 stars") if you like it, thanks!
 
-= I need help customizing this plugin? =
-Professional engineer and independent creative technologist in tech · over 7 years experience working from prototype to production · developing WordPress products, services, and eCommerce solutions.
-
-[Available for hire &#8594;](https://mahdiyazdani.com "Mahdi Yazdani’s personal website")
-
 == Screenshots ==
 1. Plugin Settings
 
 == Changelog ==
+= 2.0.2 =
+* Compatibility with WordPress 6.1
+
 = 2.0.1 =
-* Added missing `data` keyword from the attribute name. 
+* Added missing `data` keyword from the attribute name.
 
 = 2.0.0 =
 * Define unlimited number of attributes.
