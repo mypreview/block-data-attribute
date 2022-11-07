@@ -32,7 +32,6 @@ In the search field type “Block Data Attribute”, then click “Search Plugin
 The manual installation method requires downloading the plugin and uploading it to your webserver via your favorite FTP application. The WordPress codex contains [instructions on how to do this here](https://wordpress.org/support/article/managing-plugins/#manual-plugin-installation "Manual plugin installation").
 
 = Updating =
-
 Automatic updates should work smoothly, but we still recommend you back up your site.
 
 == Frequently Asked Questions ==
@@ -84,12 +83,12 @@ If you or your company use any of my projects or like what I’m doing, please c
 Please share your experience by leaving this plugin [5 shining stars](https://wordpress.org/support/plugin/block-data-attribute/reviews/ "Rate Block Data Attribute 5 stars") if you like it, thanks!
 
 == Screenshots ==
-= 2.0.2 =
-* Compatibility with WordPress 6.1
-
 1. Plugin Settings
 
 == Changelog ==
+= 2.0.2 =
+* Compatibility with WordPress 6.1
+
 = 2.0.1 =
 * Added missing `data` keyword from the attribute name.
 
