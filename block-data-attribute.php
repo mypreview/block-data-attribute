@@ -26,7 +26,7 @@
  * Version:             2.0.2
  * Requires at least:   5.5
  * Requires PHP:        7.4
- * Author:              Mahdi Yazdani
+ * Author:              MyPreview
  * Author URI:          https://www.mahdiyazdani.com
  * License:             GPL-3.0+
  * License URI:         http://www.gnu.org/licenses/gpl-3.0.txt
