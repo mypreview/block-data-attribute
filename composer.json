@@ -5,7 +5,7 @@
 			"!/languages",
 			"/@mypreview",
 			"/src",
-			"/vendor/*",
+			"/vendor",
 			"node_modules",
 			"CONTRIBUTING.md",
 			"CODE_OF_CONDUCT.md",
@@ -33,6 +33,13 @@
 		}
 	},
 	"description": "This plugin designed with extensibility in mind for data that should be associated with a particular block type but need not have any defined meaning.",
+	"extra": {
+		"scripts-description": {
+			"lint:wpcbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier",
+			"lint:wpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
+			"make-pot": "Create a POT file for the WordPress plugin in the current directory"
+		}
+	},
 	"homepage": "https://wordpress.org/support/plugin/block-data-attribute",
 	"keywords": [
 		"WordPress",
@@ -53,9 +60,8 @@
 		"wp-coding-standards/wpcs": "2.3.0"
 	},
 	"scripts": {
-		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor --exclude node_modules .",
-		"lint:wpcbf": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf --runtime-set testVersion 7.4-",
-		"lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --runtime-set testVersion 7.4-",
+		"lint:wpcbf": "phpcbf --extensions=php -p --runtime-set testVersion 7.4-",
+		"lint:wpcs": "phpcs --extensions=php -s -p --runtime-set testVersion 7.4-",
 		"make-pot": "wp i18n make-pot . languages/block-data-attribute.pot --exclude=build"
 	},
 	"type": "wordpress-plugin"
